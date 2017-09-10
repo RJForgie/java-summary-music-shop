@@ -6,16 +6,20 @@ package com.example.ryanforgie.java_music_exchange;
 
 public abstract class Instrument {
 
+    private String brand;
     private String colour;
     private String material;
     private double buyPrice;
     private double sellPrice;
+    private Family family;
 
-    public Instrument( String colour, String material, double buyPrice, double sellPrice) {
+    public Instrument( String brand, String colour, String material, double buyPrice, double sellPrice, Family family) {
+        this.brand = brand;
         this.colour = colour;
         this.material = material;
         this.buyPrice = buyPrice;
         this.sellPrice = sellPrice;
+        this.family = family;
     }
 
 
@@ -33,5 +37,13 @@ public abstract class Instrument {
 
     public double getSellPrice() {
         return sellPrice;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public Family getFamily() {
+        return family;
     }
 }

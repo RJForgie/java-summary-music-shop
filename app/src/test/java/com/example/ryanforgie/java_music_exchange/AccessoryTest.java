@@ -24,7 +24,7 @@ public class AccessoryTest {
 
     @Test
     public void canCalculateMarkup() {
-        assertEquals(50.00, drumsticks.calculateMarkup(), 1e-6);
+        assertEquals(5.00, drumsticks.calculateMarkup(), 1e-6);
     }
 
 }

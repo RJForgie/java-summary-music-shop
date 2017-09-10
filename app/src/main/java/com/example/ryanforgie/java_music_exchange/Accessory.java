@@ -29,6 +29,6 @@ public class Accessory implements Sellable {
     }
 
     public Double calculateMarkup() {
-        return (this.getSellPrice() / this.getBuyPrice() -1) * 100;
+        return this.getSellPrice() - this.getBuyPrice();
     }
 }

@@ -14,7 +14,7 @@ public class GuitarTest {
 
     @Before
     public void before(){
-        guitar = new Guitar(6, "Black", "Wood", 80.00, 100.00);
+        guitar = new Guitar(6, "Gibson", "Black", "Wood", 80.00, 100.00, Family.STRINGS);
     }
 
     @Test
@@ -24,10 +24,12 @@ public class GuitarTest {
 
     @Test
     public void guitarInheritsFromInstrument() {
+        assertEquals("Gibson", guitar.getBrand());
         assertEquals("Black", guitar.getColour());
         assertEquals("Wood", guitar.getMaterial());
         assertEquals(80.00, guitar.getBuyPrice(), 1e-6);
         assertEquals(100.00, guitar.getSellPrice(), 1e-6);
+        assertEquals(Family.STRINGS, guitar.getFamily());
     }
 
     @Test
@@ -37,6 +39,6 @@ public class GuitarTest {
 
     @Test
     public void canCalculateMarkup() {
-        assertEquals(25.00, guitar.calculateMarkup(), 1e-6);
+        assertEquals(20.00, guitar.calculateMarkup(), 1e-6);
     }
 }

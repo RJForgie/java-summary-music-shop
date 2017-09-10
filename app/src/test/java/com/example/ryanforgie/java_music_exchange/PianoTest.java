@@ -14,7 +14,7 @@ public class PianoTest {
 
     @Before
     public void before(){
-        piano = new Piano(20, "Wood", "Brown", 150.00, 200.00);
+        piano = new Piano(20, "Steinway", "Wood", "Brown", 150.00, 200.00, Family.KEYBOARD);
     }
 
     @Test

@@ -28,7 +28,17 @@ public class Shop {
         this.stock.add(item);
     }
 
-    public void removeItem(int index) {
-        this.getStock().remove(index);
+    public void removeItem(Sellable item) {
+        this.getStock().remove(item);
     }
+
+    public double calculatePotentialProfit() {
+        Double total = 0.0;
+        for (Sellable item : this.getStock()){
+            total += item.calculateMarkup();
+        }
+        return total;
+    }
+
+
 }
