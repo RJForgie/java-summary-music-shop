@@ -12,6 +12,23 @@ public class Shop {
     private ArrayList<Sellable> stock;
 
     public Shop(String name) {
+        this.name = name;
+        this.stock = new ArrayList<>();
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    public ArrayList<Sellable> getStock() {
+        return stock;
+    }
+
+    public void addToStock(Sellable item) {
+        this.stock.add(item);
+    }
+
+    public void removeItem(int index) {
+        this.getStock().remove(index);
     }
 }
